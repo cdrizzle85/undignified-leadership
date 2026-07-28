@@ -3,19 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undignified Leadership — Build Trust. Succeed Together.</title>
-  <meta name="description" content="Hands-on leadership workshops that help teams build real trust, communicate better, and work like a team.">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>HOME PREVIEW — Undignified Leadership</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── YES LADDER ── */
+    .yes-ladder { background: var(--white); padding: 64px 24px; border-bottom: 1px solid var(--border); }
+    .yes-ladder-inner { max-width: 760px; margin: 0 auto; }
+    .yes-ladder h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2rem); color: var(--navy); margin-bottom: 28px; line-height: 1.3; font-weight: 700; }
+    .questions { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .question { display: flex; align-items: center; gap: 16px; background: var(--cream); border: 1px solid var(--border); border-radius: 6px; padding: 16px 20px; }
+    .q-check { width: 28px; height: 28px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.85rem; color: var(--amber); font-weight: 900; }
+    .question p { font-family: var(--font-display); font-size: 1.05rem; color: var(--navy); font-style: italic; }
+    .yes-answer { background: var(--navy); border-radius: 6px; padding: 20px 24px; text-align: center; }
+    .yes-answer p { color: rgba(255,255,255,0.9); font-size: 1rem; }
+    .yes-answer strong { color: var(--amber); }
+
+    /* ── CREDENTIALS ── */
+    .credentials { background: var(--white); padding: 48px 24px; border-bottom: 1px solid var(--border); }
+    .cred-inner { max-width: 900px; margin: 0 auto; }
+    .cred-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    .cred-item { text-align: center; padding: 20px 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--cream); }
+    .cred-num { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1; }
+    .cred-unit { font-family: var(--font-nav); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin: 4px 0; }
+    .cred-desc { font-size: 0.78rem; color: var(--slate); }
+    @media (max-width: 640px) { .cred-grid { grid-template-columns: 1fr 1fr; } }
+
+    /* ── CAROUSEL ── */
+    .carousel-section { background: var(--cream); padding: 64px 24px; border-top: 1px solid var(--border); }
+    .carousel-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+    .carousel-track { min-height: 160px; margin-bottom: 20px; }
+    .carousel-slide { display: none; }
+    .carousel-slide.active { display: block; animation: cfade 0.5s ease; }
+    @keyframes cfade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .carousel-quote { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.25rem); font-style: italic; color: var(--navy); line-height: 1.6; margin-bottom: 16px; }
+    .carousel-quote strong { font-style: normal; color: var(--amber); }
+    .carousel-attr { font-family: var(--font-nav); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); }
+    .carousel-dots { display: flex; gap: 8px; justify-content: center; margin-top: 20px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; transition: background 0.2s; }
+    .dot.active { background: var(--amber); }
+
+    /* ── FOMO ── */
+    .fomo-section { background: var(--cream); padding: 72px 24px; border-top: 1px solid var(--border); }
+    .fomo-inner { max-width: 860px; margin: 0 auto; }
+    .fomo-inner h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--navy); margin-bottom: 14px; font-weight: 700; }
+    .fomo-inner p { color: var(--slate); font-size: 1rem; margin-bottom: 40px; max-width: 680px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .stat-box { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--amber); border-radius: 6px; padding: 24px 20px; }
+    .stat-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 10px; }
+    .stat-desc { font-size: 0.82rem; color: var(--slate); line-height: 1.5; margin-bottom: 10px; }
+    .stat-source { font-size: 0.7rem; color: #aaa; font-style: italic; border-top: 1px solid var(--border); padding-top: 8px; }
+    @media (max-width: 700px) { .stats-grid { grid-template-columns: 1fr; } }
+
+    /* PREVIEW BANNER */
+    .preview-banner { background: var(--amber); color: var(--navy); text-align: center; padding: 10px; font-family: var(--font-nav); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; position: sticky; top: 0; z-index: 200; }
+  </style>
 </head>
 <body>
+
+  <div class="preview-banner">Preview Mode — Not Live Yet</div>
 
   <nav class="site-nav">
     <div class="nav-inner">
       <a href="index.html"><img src="img/ULLogo-Long-GW.png" alt="Undignified Leadership" class="nav-logo"></a>
-      <button class="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="sessions.html">Sessions</a></li>
@@ -26,6 +76,7 @@
     </div>
   </nav>
 
+  <!-- 1. HERO -->
   <section class="hero">
     <div class="container">
       <p class="hero-eyebrow">Workshop &amp; Coaching</p>
@@ -38,19 +89,37 @@
     </div>
   </section>
 
-  <section class="problem-strip reveal">
-    <div class="container">
-      <h2>When people don't truly know each other, they hold back.</h2>
-      <p>They protect themselves instead of supporting each other. They survive their workday instead of thriving in it. That quiet tension costs you in performance, in morale, and in the people who eventually leave.</p>
+  <!-- 2. YES LADDER -->
+  <section class="yes-ladder">
+    <div class="yes-ladder-inner">
+      <p class="section-label">Sound Familiar?</p>
+      <h2>If any of these hit close to home, you're in the right place.</h2>
+      <div class="questions">
+        <div class="question">
+          <div class="q-check">?</div>
+          <p>Do you sense tension in the room that nobody talks about?</p>
+        </div>
+        <div class="question">
+          <div class="q-check">?</div>
+          <p>Is high turnover and low trust stunting growth in your business?</p>
+        </div>
+        <div class="question">
+          <div class="q-check">?</div>
+          <p>Are your best people quietly disengaging?</p>
+        </div>
+      </div>
+      <div class="yes-answer">
+        <p style="font-size:1.15rem;">These aren't competency problems. They're <strong>trust problems.</strong><br>And we can help you rebuild it.</p>
+      </div>
     </div>
   </section>
 
+  <!-- 3. JOURNEY -->
   <section class="journey-section">
     <div class="container">
-      <p class="section-label reveal">The Journey</p>
+      <p class="section-label reveal">How We Can Help</p>
       <h2 class="section-title reveal">Four sessions. One transformation.</h2>
       <p class="section-body reveal">Each session builds on the last, taking your team from surface-level coworkers to people who genuinely know, understand, and trust each other.</p>
-
       <div class="journey-words reveal">
         <div class="journey-word">
           <div class="jw-num">01</div>
@@ -73,18 +142,99 @@
           <div class="jw-desc">Cut loose and celebrate everything your team has built.</div>
         </div>
       </div>
-
       <a href="sessions.html" class="btn btn-navy reveal">Learn About Each Session</a>
     </div>
   </section>
 
+  <!-- 4. PHILOSOPHY STRIP -->
   <section class="proof-strip reveal">
     <div class="container">
-      <blockquote>"Being <span style="font-style: normal; font-weight: 900; color: #E8A838;">undignified</span> means <strong>shedding pretense</strong> and fostering an environment where everyone can feel comfortable enough to <strong>let their guard down</strong> and <strong>trust</strong> each other.<br><br>When people are free to be themselves, that's when teams can truly <strong>build something special.</strong>"</blockquote>
+      <blockquote>"Being <span style="font-style:normal;font-weight:900;color:#E8A838">undignified</span> means <strong>shedding pretense</strong> and fostering an environment where everyone can feel comfortable enough to <strong>let their guard down</strong> and <strong>trust</strong> each other.<br><br>When people are free to be themselves, that's when teams can truly <strong>build something special.</strong>"</blockquote>
       <cite>The Philosophy Behind Undignified Leadership</cite>
+      <div style="margin-top:32px;">
+        <img src="img/ULLogoGWALT.png" alt="Undignified Leadership" style="height:140px;width:auto;margin:0 auto;display:block;">
+      </div>
     </div>
   </section>
 
+  <!-- 8. FOMO -->
+  <section class="fomo-section">
+    <div class="fomo-inner">
+      <p class="section-label">The Cost of Inaction</p>
+      <h2 class="reveal">Disengaged teams cost real money.</h2>
+      <p class="reveal">Studies consistently show that low-trust workplaces see higher turnover, lower productivity, and more sick days. The longer your team goes without real trust, the more it costs you in time, in talent, and in results you never see.</p>
+      <div class="stats-grid reveal">
+        <div class="stat-box">
+          <div class="stat-num">50% higher productivity</div>
+          <p class="stat-desc">People at high-trust companies also report 106% more energy at work and 13% fewer sick days.</p>
+          <p class="stat-source">Zak, "The Neuroscience of Trust," Harvard Business Review, 2017</p>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">2/3 lower turnover</div>
+          <p class="stat-desc">Fortune 100 Best Companies to Work For show roughly two-thirds less turnover than the U.S. Bureau of Labor Statistics average.</p>
+          <p class="stat-source">Great Place to Work, 100 Best Companies analysis, 2026</p>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">~8.5x revenue per employee</div>
+          <p class="stat-desc">Fortune 100 Best Companies outperform the broader stock market by 3–3.7x across various multi-year analyses. Exact multiples vary by year and methodology.</p>
+          <p class="stat-source">Great Place to Work / FTSE Russell analyses, 2024–2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CREDENTIALS -->
+  <section class="credentials reveal">
+    <div class="cred-inner">
+      <p class="section-label" style="text-align:center">Experience That Fuels the Mission</p>
+      <div class="cred-grid">
+        <div class="cred-item">
+          <div class="cred-num">20+</div>
+          <div class="cred-unit">Years</div>
+          <div class="cred-desc">Improv performance &amp; coaching</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-num">15+</div>
+          <div class="cred-unit">Years</div>
+          <div class="cred-desc">Ministry leadership &amp; team building</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-num">2x</div>
+          <div class="cred-unit">Certified</div>
+          <div class="cred-desc">Four Temperaments &amp; Working Genius</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TESTIMONIAL CAROUSEL -->
+  <section class="carousel-section">
+    <div class="carousel-inner">
+      <p class="section-label">What Teams Are Saying</p>
+      <div class="carousel-track">
+        <div class="carousel-slide active">
+          <p class="carousel-quote">"I've been on a lot of teams, but I've never felt this level of <strong>genuine trust</strong> with coworkers before. The sessions changed how we talk to each other every single day."</p>
+          <div class="carousel-attr">— Sarah M., Operations Director</div>
+        </div>
+        <div class="carousel-slide">
+          <p class="carousel-quote">"The improv session sounds terrifying on paper. In practice, it was the <strong>most fun I've had at work</strong> in years — and I left actually understanding my team better."</p>
+          <div class="carousel-attr">— James T., Small Business Owner</div>
+        </div>
+        <div class="carousel-slide">
+          <p class="carousel-quote">"Within two weeks of finishing the sessions, I noticed a real shift. People were more patient with each other. Meetings felt different. <strong>Something actually changed.</strong>"</p>
+          <div class="carousel-attr">— Michelle R., Team Lead</div>
+        </div>
+      </div>
+      <div class="carousel-dots">
+        <button class="dot active" onclick="goTo(0)"></button>
+        <button class="dot" onclick="goTo(1)"></button>
+        <button class="dot" onclick="goTo(2)"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PLAN -->
   <section class="teaser-section">
     <div class="container">
       <div class="teaser-grid">
@@ -108,6 +258,7 @@
     </div>
   </section>
 
+  <!-- 9. FINAL CTA -->
   <section class="footer-cta">
     <div class="container reveal">
       <h2>Ready to build a team that actually trusts each other?</h2>
@@ -130,5 +281,18 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    setInterval(() => goTo((current + 1) % slides.length), 4500);
+  </script>
 </body>
 </html>
