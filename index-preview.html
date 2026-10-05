@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undignified Leadership — Build Trust. Succeed Together.</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>HOME PREVIEW — Undignified Leadership</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* ── YES LADDER ── */
@@ -28,24 +27,15 @@
     .cred-unit { font-family: var(--font-nav); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin: 4px 0; }
     .cred-desc { font-size: 0.78rem; color: var(--slate); }
     @media (max-width: 640px) { .cred-grid { grid-template-columns: 1fr 1fr; } }
-    /* top row: photo + text */
-    .cred-top-row { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; margin-top: 32px; }
+    .cred-with-photo { display: grid; grid-template-columns: 320px auto; gap: 48px; align-items: center; margin-top: 32px; justify-content: center; }
     .cred-photo img { width: 100%; border-radius: 6px; display: block; box-shadow: 0 8px 32px rgba(27,58,92,0.12); }
-    .cred-text p { color: var(--slate); font-size: 0.97rem; line-height: 1.75; margin-bottom: 14px; }
-    .cred-text p:last-child { margin-bottom: 0; }
-    .cred-text strong { color: var(--navy); }
-    /* bottom row: three boxes side by side */
-    .cred-bottom-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
-    .cred-bottom-row .cred-item { display: flex; align-items: center; gap: 20px; padding: 16px 24px; text-align: left; }
+    .cred-boxes { display: flex; flex-direction: column; gap: 14px; justify-content: center; }
+    .cred-boxes .cred-item { display: flex; align-items: center; gap: 20px; padding: 16px 24px; text-align: left; width: 100%; }
     .cred-left { display: flex; flex-direction: column; align-items: center; min-width: 60px; }
-    .cred-bottom-row .cred-num { font-size: 2.2rem; line-height: 1; margin: 0; }
-    .cred-bottom-row .cred-unit { font-family: "Barlow Condensed", sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8A838; margin: 2px 0 0 0; }
-    .cred-bottom-row .cred-desc { font-size: 0.9rem; color: #6B7280; }
-    @media (max-width: 768px) {
-      .cred-top-row { grid-template-columns: 1fr; }
-      .cred-photo img { max-width: 280px; margin: 0 auto; }
-      .cred-bottom-row { grid-template-columns: 1fr; }
-    }
+    .cred-boxes .cred-num { font-size: 2.2rem; line-height: 1; margin: 0; }
+    .cred-boxes .cred-unit { font-family: "Barlow Condensed", sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8A838; margin: 2px 0 0 0; }
+    .cred-boxes .cred-desc { font-size: 0.9rem; color: #6B7280; white-space: nowrap; }
+    @media (max-width: 768px) { .cred-with-photo { grid-template-columns: 1fr; } .cred-photo img { max-width: 280px; margin: 0 auto; } .cred-boxes .cred-item { width: 100%; } .cred-boxes .cred-desc { white-space: normal; } }
 
     /* ── CAROUSEL ── */
     .carousel-section { background: var(--cream); padding: 64px 24px; border-top: 1px solid var(--border); }
@@ -73,9 +63,13 @@
     .stat-source { font-size: 0.7rem; color: #aaa; font-style: italic; border-top: 1px solid var(--border); padding-top: 8px; }
     @media (max-width: 700px) { .stats-grid { grid-template-columns: 1fr; } }
 
+    /* PREVIEW BANNER */
+    .preview-banner { background: var(--amber); color: var(--navy); text-align: center; padding: 10px; font-family: var(--font-nav); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; position: sticky; top: 0; z-index: 200; }
   </style>
 </head>
 <body>
+
+  <div class="preview-banner">Preview Mode — Not Live Yet</div>
 
   <nav class="site-nav">
     <div class="nav-inner">
@@ -95,53 +89,11 @@
   <section class="hero">
     <div class="container">
       <p class="hero-eyebrow">Workshop &amp; Coaching</p>
-      <h1>Most teams don't struggle with talent.<br>They struggle with <em>trust.</em></h1>
+      <h1>Most teams don't struggle<br>with talent. They struggle<br>with <em>trust.</em></h1>
       <p class="hero-tagline">Build trust. Succeed together.</p>
       <div class="hero-cta-group">
         <a href="sessions.html" class="btn btn-primary">See the Sessions</a>
         <a href="contact.html" class="btn btn-outline">Get in Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. CREDENTIALS -->
-  <section class="credentials reveal">
-    <div class="cred-inner">
-      <p class="section-label" style="text-align:center">Experience That Fuels the Mission</p>
-      <div class="cred-top-row">
-        <div class="cred-photo">
-          <img src="img/CoryHeadshot.png" alt="Cory Draper">
-        </div>
-        <div class="cred-text">
-          <p>In all my years being on teams of all sorts, the ones who were the most effective, efficient, and harmonious were the ones who all shared the exact same characteristic: people felt the freedom to be themselves.</p>
-          <p>They shed all pretense. They were comfortable enough to let their guard down.</p>
-          <p>They were willing to become a little <span style="font-style:normal;font-weight:900;color:#E8A838;">undignified.</span></p>
-          <p>This kind of trust is hard to get. But when you do, that's when <strong>turnover slows.</strong> That's when <strong>efficiency soars.</strong> That's when <strong>results pour in.</strong></p>
-          <p>That's where Undignified Leadership comes in.</p>
-        </div>
-      </div>
-      <div class="cred-bottom-row">
-        <div class="cred-item">
-          <div class="cred-left">
-            <div class="cred-num">20+</div>
-            <div class="cred-unit">Years</div>
-          </div>
-          <div class="cred-desc">Improv performance &amp; coaching</div>
-        </div>
-        <div class="cred-item">
-          <div class="cred-left">
-            <div class="cred-num">15+</div>
-            <div class="cred-unit">Years</div>
-          </div>
-          <div class="cred-desc">Ministry leadership &amp; team building</div>
-        </div>
-        <div class="cred-item">
-          <div class="cred-left">
-            <div class="cred-num">2x</div>
-            <div class="cred-unit">Certified</div>
-          </div>
-          <div class="cred-desc">Four Temperaments &amp; Working Genius</div>
-        </div>
       </div>
     </div>
   </section>
@@ -235,6 +187,41 @@
           <div class="stat-num">~8.5x revenue per employee</div>
           <p class="stat-desc">Fortune 100 Best Companies outperform the broader stock market by 3–3.7x across various multi-year analyses. Exact multiples vary by year and methodology.</p>
           <p class="stat-source">Great Place to Work / FTSE Russell analyses, 2024–2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CREDENTIALS -->
+  <section class="credentials reveal">
+    <div class="cred-inner">
+      <p class="section-label" style="text-align:center">Experience That Fuels the Mission</p>
+      <div class="cred-with-photo">
+        <div class="cred-photo">
+          <img src="img/CoryHeadshot.png" alt="Cory Draper">
+        </div>
+        <div class="cred-boxes">
+          <div class="cred-item">
+            <div class="cred-left">
+              <div class="cred-num">20+</div>
+              <div class="cred-unit">Years</div>
+            </div>
+            <div class="cred-desc">Improv performance &amp; coaching</div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-left">
+              <div class="cred-num">15+</div>
+              <div class="cred-unit">Years</div>
+            </div>
+            <div class="cred-desc">Ministry leadership &amp; team building</div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-left">
+              <div class="cred-num">2x</div>
+              <div class="cred-unit">Certified</div>
+            </div>
+            <div class="cred-desc">Four Temperaments &amp; Working Genius</div>
+          </div>
         </div>
       </div>
     </div>
