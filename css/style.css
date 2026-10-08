@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 @import url('fonts.css');
 
 /* ── TOKENS ── */
@@ -13,9 +13,9 @@
   --white:     #FFFFFF;
   --border:    #E2DDD6;
 
-  --font-display: 'Superclarendon', Georgia, serif;
-  --font-nav:     'Barlow Condensed', system-ui, sans-serif;
-  --font-body:    'Barlow', system-ui, sans-serif;
+  --font-display: 'Roboto Slab', Georgia, serif;
+  --font-nav:     'Open Sans', system-ui, sans-serif;
+  --font-body:    'Open Sans', system-ui, sans-serif;
 
   --max-w: 1080px;
   --section-pad: 80px 24px;
