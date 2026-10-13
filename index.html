@@ -48,17 +48,17 @@
     }
 
     /* ── CAROUSEL ── */
-    .carousel-section { background: var(--cream); padding: 64px 24px; border-top: 1px solid var(--border); }
+    .carousel-section { background: var(--navy); padding: 64px 24px; border-top: none; }
     .carousel-inner { max-width: 760px; margin: 0 auto; text-align: center; }
     .carousel-track { min-height: 160px; margin-bottom: 20px; }
     .carousel-slide { display: none; }
     .carousel-slide.active { display: block; animation: cfade 0.5s ease; }
     @keyframes cfade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    .carousel-quote { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.25rem); font-style: italic; color: var(--navy); line-height: 1.6; margin-bottom: 16px; }
+    .carousel-quote { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.25rem); font-style: italic; color: var(--white); line-height: 1.6; margin-bottom: 16px; }
     .carousel-quote strong { font-style: normal; color: var(--amber); }
-    .carousel-attr { font-family: var(--font-nav); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); }
+    .carousel-attr { font-family: var(--font-nav); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
     .carousel-dots { display: flex; gap: 8px; justify-content: center; margin-top: 20px; }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; transition: background 0.2s; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.3); border: none; cursor: pointer; transition: background 0.2s; }
     .dot.active { background: var(--amber); }
 
     /* ── FOMO ── */
@@ -79,7 +79,7 @@
 
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="index.html"><img src="img/ULLogo-Long-GW.png" alt="Undignified Leadership" class="nav-logo"></a>
+      <a href="index.html"><img src="img/ULLogo-Long-BGW.png" alt="Undignified Leadership" class="nav-logo"></a>
       <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -180,7 +180,7 @@
   </section>
 
   <!-- 3. JOURNEY -->
-  <section class="journey-section">
+  <section class="journey-section" style="background: var(--navy);">
     <div class="container">
       <p class="section-label reveal">How We Can Help</p>
       <h2 class="section-title reveal">Four Sessions. A Better &#8220;Together.&#8221;</h2>
@@ -212,12 +212,12 @@
   </section>
 
   <!-- 4. PHILOSOPHY STRIP -->
-  <section class="proof-strip reveal">
+  <section class="proof-strip reveal" style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="container">
       <blockquote>"Being <span style="font-style:normal;font-weight:900;color:#E8A838">undignified</span> means <strong>shedding pretense</strong> and fostering an environment where everyone can feel comfortable enough to <strong>let their guard down</strong> and <strong>trust</strong> each other.<br><br>When people are free to be themselves, that's when teams can truly <strong>work better together.</strong>"</blockquote>
       <cite>The Philosophy Behind Undignified Leadership</cite>
       <div style="margin-top:32px;">
-        <img src="img/ULLogoGWALT.png" alt="Undignified Leadership" style="height:140px;width:auto;margin:0 auto;display:block;">
+        <img src="img/ULLogo-BGW.png" alt="Undignified Leadership" style="height:140px;width:auto;margin:0 auto;display:block;">
       </div>
     </div>
   </section>
@@ -252,7 +252,7 @@
   </section>
 
   <!-- 6. TESTIMONIAL CAROUSEL -->
-  <section class="carousel-section">
+  <section class="carousel-section" style="background: var(--navy); border-top: none;">
     <div class="carousel-inner">
       <p class="section-label">What Teams Are Saying</p>
       <div class="carousel-track">
@@ -311,7 +311,7 @@
   </section>
 
   <footer class="site-footer">
-    <img src="img/ULLogo.png" alt="Undignified Leadership" class="footer-logo">
+    <img src="img/ULLogo-BGW.png" alt="Undignified Leadership" class="footer-logo">
     <div class="footer-tagline">Build trust. Succeed together.</div>
     <ul class="footer-links">
       <li><a href="index.html">Home</a></li>
