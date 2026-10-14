@@ -3,6 +3,7 @@
 
 /* ── TOKENS ── */
 :root {
+  color-scheme: light only;
   --navy:      #1B3A5C;
   --navy-dark: #112640;
   --amber:     #E8A838;
@@ -692,7 +693,8 @@ a { color: inherit; text-decoration: none; }
 
 /* ── MOBILE ── */
 @media (max-width: 480px) {
-  :root { --section-pad: 56px 20px; }
+  :root {
+  color-scheme: light only; --section-pad: 56px 20px; }
   .hero { padding: 72px 20px 64px; }
   .page-hero { padding: 56px 20px 48px; }
   .btn { padding: 12px 22px; font-size: 0.9rem; }
