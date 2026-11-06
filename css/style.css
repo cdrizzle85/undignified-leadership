@@ -664,14 +664,6 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto 16px;
   display: block;
 }
-.footer-brand-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-.footer-brand-row .footer-logo { margin: 0 -18px; }
-.footer-badge { width: 87px; height: 87px; object-fit: contain; flex-shrink: 0; }
 .footer-tagline {
   font-family: var(--font-nav);
   font-size: 0.82rem;
